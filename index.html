@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pattern match | KMP algorithm</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap_custome.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/default.css'>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="container-fluid" id="header">
+            <div id="banner">
+                    <h2>KNUTT MORRIS PRATT</h2>
+                    <H3>PATTERN MATHCING</H3>
+                    <hr>
+                    <p>Knuth Morris Pratt (KMP) is an algorithm, which checks the characters from left to right. When a pattern has
+                        a sub-pattern appears more than one in the sub-pattern, it uses that property to improve the time complexity,
+                        also for in the worst case.
+                    </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row " id="pattern-insert-container">
+                <div class="col-xs-12 col-md-10 pl-0 pr-0">
+                    <p class="mb-0 pattern-text-decoration" contenteditable="true" id="pattern" spellcheck="false" oninput="getSpanNodesAndSerch()">Enter your pattern here</p>
+                </div>
+                <div class="col-xs-12 col-md-2 p-0 pl-md-1">
+                    <div class="pattern-text-decoration" id="score">
+                        0 mathces
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr style="background: #fff;height: 2px;">
+
+        <div class="container p-0 pb-1" id="textContainer">
+            <button class="btn btn-lg btn-danger" onclick="createSpanNodesOnClick()">Generare random text</button>
+            <hr>
+            <div id="textArea" class="text-area" contenteditable="true" spellcheck="false" oninput="getSpanNodesAndSerch()">Enter your text here.</div>
+            <hr>
+            <div id="textOutput" class="text-area">
+                
+            </div>
+            <hr>
+        </div>
+        
+    </div>
+
+    <script src='js/default.js'></script>
+
+</body>
+</html>
